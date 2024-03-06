@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>HamzehAlawneh - 155432</title> 
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function validateForm() {
+            var name = document.forms["contactForm"]["name"].value;
+            var email = document.forms["contactForm"]["email"].value;
+            var country = document.forms["contactForm"]["country"].value;
+            var comments = document.forms["contactForm"]["comments"].value;
+            if (name == "" || email == "" || country == "" || comments == "") {
+                alert("Please fill out all fields");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+<form name="contactForm" method="post" onsubmit="return validateForm()">
+    <h2 style="color:white;">Please Fill This To Talk</h2>
+    <p><label>Name: <input name="name" type="text" size="25" maxlength="20"> </label></p>
+    <p><label>Email: <input type="text" name="email" size="25"></label></p>
+    <p><label>Country: <input type="text" name="country" size="25"></label></p>
+    <p><label>Comments: <textarea name="comments" rows="4" cols="25"></textarea></label></p>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
